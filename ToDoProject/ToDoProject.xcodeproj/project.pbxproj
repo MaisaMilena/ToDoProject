@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20B6F221F01E34400AE5EED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6F211F01E34400AE5EED /* HomeViewController.swift */; };
+		C20B6F241F01E38E00AE5EED /* CadastrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6F231F01E38E00AE5EED /* CadastrarViewController.swift */; };
+		C20B6F261F01E3A300AE5EED /* ListarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6F251F01E3A300AE5EED /* ListarTableViewController.swift */; };
+		C20B6F281F01E3B600AE5EED /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6F271F01E3B600AE5EED /* ConfiguracoesViewController.swift */; };
 		C22AEE481F01720600ABD825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AEE471F01720600ABD825 /* AppDelegate.swift */; };
 		C22AEE4A1F01720600ABD825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AEE491F01720600ABD825 /* ViewController.swift */; };
 		C22AEE4D1F01720600ABD825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22AEE4B1F01720600ABD825 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C20B6F211F01E34400AE5EED /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C20B6F231F01E38E00AE5EED /* CadastrarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadastrarViewController.swift; sourceTree = "<group>"; };
+		C20B6F251F01E3A300AE5EED /* ListarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListarTableViewController.swift; sourceTree = "<group>"; };
+		C20B6F271F01E3B600AE5EED /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
 		C22AEE441F01720600ABD825 /* ToDoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AEE471F01720600ABD825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C22AEE491F01720600ABD825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C20B6F201F01E32100AE5EED /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C20B6F211F01E34400AE5EED /* HomeViewController.swift */,
+				C20B6F231F01E38E00AE5EED /* CadastrarViewController.swift */,
+				C20B6F251F01E3A300AE5EED /* ListarTableViewController.swift */,
+				C20B6F271F01E3B600AE5EED /* ConfiguracoesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		C22AEE3B1F01720600ABD825 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +73,7 @@
 		C22AEE461F01720600ABD825 /* ToDoProject */ = {
 			isa = PBXGroup;
 			children = (
+				C20B6F201F01E32100AE5EED /* Controllers */,
 				C22AEE471F01720600ABD825 /* AppDelegate.swift */,
 				C22AEE491F01720600ABD825 /* ViewController.swift */,
 				C22AEE4B1F01720600ABD825 /* Main.storyboard */,
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20B6F241F01E38E00AE5EED /* CadastrarViewController.swift in Sources */,
 				C22AEE4A1F01720600ABD825 /* ViewController.swift in Sources */,
 				C22AEE481F01720600ABD825 /* AppDelegate.swift in Sources */,
+				C20B6F281F01E3B600AE5EED /* ConfiguracoesViewController.swift in Sources */,
+				C20B6F261F01E3A300AE5EED /* ListarTableViewController.swift in Sources */,
+				C20B6F221F01E34400AE5EED /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +328,7 @@
 				C22AEE581F01720600ABD825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
