@@ -10,30 +10,64 @@ import UIKit
 import RealmSwift
 
 class ConfiguracoesViewController: UIViewController {
+
+    @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var descricao: UITextView!
+    @IBOutlet weak var dataLimite: UIDatePicker!
+    
     
     var id: String!
     let realm = try! Realm()
+    var atividade = Atividade()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        apresentaAtividade()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    private func apresentaAtividade(){
+        // Carrega os dados daquela atividade
+        carregarAtividade()
+        
+        // Configura para apresentar na tela
+        nome.text = atividade.nome
+        descricao.text = atividade.descricao
+        dataLimite.date = atividade.dataLimite
+    }
+    
     private func carregarAtividade(){
-        
-        var atividade = Atividade()
-        
+    
         try! realm.write {
             let predicate: NSPredicate = NSPredicate(format: "id = \(self.id)", argumentArray: nil)
             atividade = realm.objects(Atividade.self).filter(predicate).first!
         }
         
+    }
+    
+    @IBAction func atualizarAtividade(_ sender: Any) {
+        
+        atividade.nome = nome.text!
+        atividade.descricao = descricao.text!
+        atividade.dataLimite = dataLimite.date
+        
+        try! realm.write {
+            atividade = realm.create(Atividade.self,
+                                     value: ["id": atividade.id,
+                                            "nome": atividade.nome,
+                                             "descricao": atividade.descricao,
+                                             "dataLimite": atividade.dataLimite],
+                                     update: true)
+        }
         
         
     }
+    
+    
     
 
     /*

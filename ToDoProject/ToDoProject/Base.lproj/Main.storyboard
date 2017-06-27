@@ -198,6 +198,9 @@
                                 <rect key="frame" x="117" y="549" width="126" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Atualizar atividade"/>
+                                <connections>
+                                    <action selector="atualizarAtividade:" destination="vCS-yJ-Dxu" eventType="touchUpInside" id="3yE-b0-Bxu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uco-zm-xg5">
                                 <rect key="frame" x="118" y="605" width="125" height="30"/>
@@ -215,10 +218,15 @@
                         <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Configuração" id="Mb6-gi-rfp"/>
+                    <connections>
+                        <outlet property="dataLimite" destination="pwm-3Y-tW0" id="Iaq-J2-JhG"/>
+                        <outlet property="descricao" destination="cou-4e-HUD" id="1jm-F8-V7H"/>
+                        <outlet property="nome" destination="5St-Up-LoT" id="fIP-vM-YSK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yu-7l-yFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="603"/>
+            <point key="canvasLocation" x="2005.5999999999999" y="602.24887556221893"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="892-cc-roi">

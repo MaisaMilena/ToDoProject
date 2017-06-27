@@ -9,7 +9,6 @@
 import UIKit
 import RealmSwift
 
-
 class CadastrarViewController: UIViewController {
 
     @IBOutlet weak var nome: UITextField!
