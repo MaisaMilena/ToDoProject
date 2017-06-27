@@ -46,6 +46,7 @@
 		C20B6F291F01E91300AE5EED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		C20B6F2A1F01E91300AE5EED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		C20B6F321F01E96600AE5EED /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
+		C20B6F341F01ED8C00AE5EED /* ToDoProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ToDoProject.entitlements; path = ToDoProject/ToDoProject.entitlements; sourceTree = "<group>"; };
 		C22AEE441F01720600ABD825 /* ToDoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AEE471F01720600ABD825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C22AEE491F01720600ABD825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		C22AEE3B1F01720600ABD825 = {
 			isa = PBXGroup;
 			children = (
+				C20B6F341F01ED8C00AE5EED /* ToDoProject.entitlements */,
 				C20B6F291F01E91300AE5EED /* Realm.framework */,
 				C20B6F2A1F01E91300AE5EED /* RealmSwift.framework */,
 				C20B6F301F01E92F00AE5EED /* New Group */,
@@ -163,6 +165,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = B33RKQE9R2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -333,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ToDoProject/ToDoProject.entitlements;
 				DEVELOPMENT_TEAM = B33RKQE9R2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ToDoProject/ToDoProject.entitlements;
 				DEVELOPMENT_TEAM = B33RKQE9R2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

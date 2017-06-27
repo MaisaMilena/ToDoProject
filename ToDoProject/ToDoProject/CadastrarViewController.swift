@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Realm
+
 
 class CadastrarViewController: UIViewController {
 
@@ -15,10 +17,11 @@ class CadastrarViewController: UIViewController {
     @IBOutlet weak var descricao: UITextView!
     @IBOutlet weak var dataLimite: UIDatePicker!
     
+    var atividades = List<Atividade>()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -28,22 +31,17 @@ class CadastrarViewController: UIViewController {
     }
     
     @IBAction func cadastrarAtividade(_ sender: Any) {
-        
+        atividades.append(Atividade(value: ["nome": nome.text]))
+        performSegue(withIdentifier: "cadastrarListarSegue", sender: nil)
     }
     
-    
-    
-    
-    
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let listar = segue.destination as! ListarTableViewController
+        listar.atividades = self.atividades
     }
-    */
+    
 
 }

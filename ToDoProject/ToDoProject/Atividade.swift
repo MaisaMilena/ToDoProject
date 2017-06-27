@@ -19,5 +19,6 @@ class Atividade: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-     
+    
+    
 }
