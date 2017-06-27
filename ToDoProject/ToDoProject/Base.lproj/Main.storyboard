@@ -22,14 +22,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2d-ZT-1Ga">
-                                <rect key="frame" x="144" y="270" width="87" height="30"/>
+                                <rect key="frame" x="144" y="270" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Inserir tarefa"/>
+                                <connections>
+                                    <action selector="inserirTarefa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTR-5a-6cu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiJ-bd-z6A">
                                 <rect key="frame" x="141" y="367" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Buscar tarefa"/>
+                                <connections>
+                                    <action selector="listarTarefas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SlS-O2-4Yt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92" y="-118"/>
+            <point key="canvasLocation" x="92" y="-118.29085457271366"/>
         </scene>
         <!--Cadastrar-->
         <scene sceneID="bC7-Bu-vfU">
@@ -88,11 +94,20 @@
                                 <rect key="frame" x="147" y="589" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cadastrar"/>
+                                <connections>
+                                    <action selector="cadastrarAtividade:" destination="K72-eP-XvZ" eventType="touchUpInside" id="DBh-44-VTf"/>
+                                    <segue destination="ZPC-65-HcX" kind="show" identifier="cadastrarListarSegue" id="byr-l0-Yq4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="F5e-f0-w1F"/>
+                    <connections>
+                        <outlet property="dataLimite" destination="Rl7-K7-suf" id="GHa-aw-yNO"/>
+                        <outlet property="descricao" destination="fMe-0B-ylT" id="Vym-k1-6of"/>
+                        <outlet property="nome" destination="SR5-aJ-2QE" id="tsp-Eu-B5W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFz-TM-Ruo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,7 +278,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="kxF-qh-tO7"/>
-        <segue reference="b9y-mu-418"/>
+        <segue reference="byr-l0-Yq4"/>
         <segue reference="fQQ-qB-f0b"/>
     </inferredMetricsTieBreakers>
 </document>

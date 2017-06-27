@@ -10,6 +10,11 @@ import UIKit
 
 class CadastrarViewController: UIViewController {
 
+    @IBOutlet weak var nome: UITextField!
+    @IBOutlet weak var descricao: UITextView!
+    @IBOutlet weak var dataLimite: UIDatePicker!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +25,14 @@ class CadastrarViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func cadastrarAtividade(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
     
 
     /*
