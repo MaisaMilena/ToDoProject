@@ -50,8 +50,34 @@ class ListarTableViewController: UITableViewController {
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
+    /*
+     Deleta um determinado item do banco e da table view
+     */
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let atividade = toDoList[indexPath.row]
+            try! self.realm.write ({
+                self.realm.delete(atividade)
+            })
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "listarConfiguracaoSegue", sender: indexPath.row)
+    }
 
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let proximaTela = segue.destination as! ConfiguracoesViewController
+        proximaTela.id = sender as! String
+    }
 }
 

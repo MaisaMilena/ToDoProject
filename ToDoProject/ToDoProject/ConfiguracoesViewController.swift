@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ConfiguracoesViewController: UIViewController {
-
-    var id 
+    
+    var id: String!
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,18 @@ class ConfiguracoesViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
+    private func carregarAtividade(){
+        
+        var atividade = Atividade()
+        
+        try! realm.write {
+            let predicate: NSPredicate = NSPredicate(format: "id = \(self.id)", argumentArray: nil)
+            atividade = realm.objects(Atividade.self).filter(predicate).first!
+        }
+        
+        
+        
+    }
     
 
     /*

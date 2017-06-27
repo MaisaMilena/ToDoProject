@@ -21,7 +21,6 @@
 		C268B03F1F0290C500D02019 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C268B03C1F0290C500D02019 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C268B0401F0290C500D02019 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C268B03D1F0290C500D02019 /* RealmSwift.framework */; };
 		C268B0411F0290C500D02019 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C268B03D1F0290C500D02019 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C28BB0271F020022008CFDD9 /* AtividadeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28BB0261F020022008CFDD9 /* AtividadeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,7 +53,6 @@
 		C22AEE531F01720600ABD825 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ToDoProject/Info.plist; sourceTree = "<group>"; };
 		C268B03C1F0290C500D02019 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		C268B03D1F0290C500D02019 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		C28BB0261F020022008CFDD9 /* AtividadeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtividadeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				C20B6F321F01E96600AE5EED /* Atividade.swift */,
-				C28BB0261F020022008CFDD9 /* AtividadeList.swift */,
 			);
 			name = Model;
 			path = ToDoProject;
@@ -209,7 +206,6 @@
 				C22AEE4A1F01720600ABD825 /* ViewController.swift in Sources */,
 				C22AEE481F01720600ABD825 /* AppDelegate.swift in Sources */,
 				C20B6F281F01E3B600AE5EED /* ConfiguracoesViewController.swift in Sources */,
-				C28BB0271F020022008CFDD9 /* AtividadeList.swift in Sources */,
 				C20B6F261F01E3A300AE5EED /* ListarTableViewController.swift in Sources */,
 				C20B6F221F01E34400AE5EED /* HomeViewController.swift in Sources */,
 			);

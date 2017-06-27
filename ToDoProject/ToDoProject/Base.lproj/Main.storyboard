@@ -120,7 +120,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="OjP-rl-gSu">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="qGO-8E-qAB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
@@ -131,7 +131,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="vCS-yJ-Dxu" kind="show" identifier="listarConfiguracesSegue" id="kxF-qh-tO7"/>
+                                    <segue destination="vCS-yJ-Dxu" kind="show" identifier="listarConfiguracaoSegue" id="kxF-qh-tO7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -225,7 +225,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e61-ou-gos" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="pRa-YO-MRI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pRa-YO-MRI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
