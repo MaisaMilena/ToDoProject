@@ -6,8 +6,6 @@
 //  Copyright © 2017 BEPiD. All rights reserved.
 //
 import RealmSwift
-import Realm
-
 
 class AtividadeList: Object {
     

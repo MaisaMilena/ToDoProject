@@ -7,18 +7,13 @@
 //
 
 import RealmSwift
-import Realm
-
+import Foundation
 
 class Atividade: Object {
     
-    var nome = ""
-    var descricao = ""
-    var concluido = false
-  
-    override static func primaryKey() -> String? {
-        return "id"
-    }
-    
+    dynamic var nome = ""
+    dynamic var descricao = ""
+    dynamic var dataLimite = Date()
+    dynamic var concluido = false
     
 }

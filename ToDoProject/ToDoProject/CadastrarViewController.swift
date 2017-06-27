@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import Realm
 
 
 class CadastrarViewController: UIViewController {
@@ -18,53 +17,33 @@ class CadastrarViewController: UIViewController {
     @IBOutlet weak var dataLimite: UIDatePicker!
     
     var atividades = List<Atividade>()
-    var notificationToken: NotificationToken!
-    var realm: Realm!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupRealm()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func setupRealm() {
-        // Log in existing user with username and password
-        let username = "test"  // <--- Update this
-        let password = "test"  // <--- Update this
-        SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
-            guard let user = user else {
-                fatalError(String(describing: error))
-            }
-            
-            DispatchQueue.main.async {
-                // Open Realm
-                let configuration = Realm.Configuration(
-                    syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/realmtasks")!)
-                )
-                self.realm = try! Realm(configuration: configuration)
-            
-            }
-        }
-    }
-    
-    deinit {
-        notificationToken.stop()
-    }
-    
-    
-    
-    
+
     
     @IBAction func cadastrarAtividade(_ sender: Any) {
-        //atividades.append(Atividade(value: ["nome": nome.text]))
         
-        try! atividades.realm?.write {
-            atividades.insert(Atividade(value: ["nome": nome.text]), at: atividades.filter("concluido = false").count)
+        // Cria uma atividade
+        let atividade = Atividade()
+        atividade.nome = nome.text!
+        atividade.descricao = descricao.text
+        atividade.dataLimite = dataLimite.date
+
+        
+        let realm = try! Realm()
+        // Adiciona a atividade
+        try! realm.write {
+            realm.add(atividade)
         }
+        
+        // Muda de tela
         performSegue(withIdentifier: "cadastrarListarSegue", sender: nil)
     }
     

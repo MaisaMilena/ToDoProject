@@ -1,0 +1,54 @@
+
+/* Class = "UIButton"; normalTitle = "Atualizar atividade"; ObjectID = "1IP-fi-od7"; */
+"1IP-fi-od7.normalTitle" = "Atualizar atividade";
+
+/* Class = "UILabel"; text = "nomeDescricao"; ObjectID = "5St-Up-LoT"; */
+"5St-Up-LoT.text" = "nomeDescricao";
+
+/* Class = "UIViewController"; title = "Home"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Home";
+
+/* Class = "UILabel"; text = "Data limite"; ObjectID = "F25-uE-LsN"; */
+"F25-uE-LsN.text" = "Data limite";
+
+/* Class = "UILabel"; text = "Decrição"; ObjectID = "FRY-su-I66"; */
+"FRY-su-I66.text" = "Decrição";
+
+/* Class = "UIViewController"; title = "Cadastrar"; ObjectID = "K72-eP-XvZ"; */
+"K72-eP-XvZ.title" = "Cadastrar";
+
+/* Class = "UINavigationItem"; title = "Configuração"; ObjectID = "Mb6-gi-rfp"; */
+"Mb6-gi-rfp.title" = "Configuração";
+
+/* Class = "UITextField"; placeholder = "Nome"; ObjectID = "SR5-aJ-2QE"; */
+"SR5-aJ-2QE.placeholder" = "Nome";
+
+/* Class = "UILabel"; text = "Nome"; ObjectID = "VWk-VQ-8xA"; */
+"VWk-VQ-8xA.text" = "Nome";
+
+/* Class = "UIButton"; normalTitle = "Cadastrar"; ObjectID = "Ypb-AN-t4Y"; */
+"Ypb-AN-t4Y.normalTitle" = "Cadastrar";
+
+/* Class = "UITableViewController"; title = "Listar"; ObjectID = "ZPC-65-HcX"; */
+"ZPC-65-HcX.title" = "Listar";
+
+/* Class = "UITextView"; text = "descricaoDescricao"; ObjectID = "cou-4e-HUD"; */
+"cou-4e-HUD.text" = "descricaoDescricao";
+
+/* Class = "UIButton"; normalTitle = "Inserir tarefa"; ObjectID = "e2d-ZT-1Ga"; */
+"e2d-ZT-1Ga.normalTitle" = "Inserir tarefa";
+
+/* Class = "UITextView"; text = "Descrição"; ObjectID = "fMe-0B-ylT"; */
+"fMe-0B-ylT.text" = "Descrição";
+
+/* Class = "UIButton"; normalTitle = "Encerrar atividade"; ObjectID = "uco-zm-xg5"; */
+"uco-zm-xg5.normalTitle" = "Encerrar atividade";
+
+/* Class = "UIViewController"; title = "Configurações"; ObjectID = "vCS-yJ-Dxu"; */
+"vCS-yJ-Dxu.title" = "Configurações";
+
+/* Class = "UILabel"; text = "Data limite"; ObjectID = "wr4-Rg-HmN"; */
+"wr4-Rg-HmN.text" = "Data limite";
+
+/* Class = "UIButton"; normalTitle = "Buscar tarefa"; ObjectID = "yiJ-bd-z6A"; */
+"yiJ-bd-z6A.normalTitle" = "Buscar tarefa";
