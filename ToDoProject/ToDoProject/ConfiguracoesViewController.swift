@@ -10,8 +10,8 @@ import UIKit
 import RealmSwift
 
 class ConfiguracoesViewController: UIViewController {
-
-    @IBOutlet weak var nome: UILabel!
+    
+    @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var descricao: UITextView!
     @IBOutlet weak var dataLimite: UIDatePicker!
     

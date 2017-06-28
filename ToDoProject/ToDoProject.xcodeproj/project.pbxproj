@@ -14,7 +14,6 @@
 		C20B6F281F01E3B600AE5EED /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6F271F01E3B600AE5EED /* ConfiguracoesViewController.swift */; };
 		C20B6F331F01E96600AE5EED /* Atividade.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20B6F321F01E96600AE5EED /* Atividade.swift */; };
 		C22AEE481F01720600ABD825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AEE471F01720600ABD825 /* AppDelegate.swift */; };
-		C22AEE4A1F01720600ABD825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22AEE491F01720600ABD825 /* ViewController.swift */; };
 		C22AEE4D1F01720600ABD825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22AEE4B1F01720600ABD825 /* Main.storyboard */; };
 		C22AEE4F1F01720600ABD825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C22AEE4E1F01720600ABD825 /* Assets.xcassets */; };
 		C22AEE521F01720600ABD825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22AEE501F01720600ABD825 /* LaunchScreen.storyboard */; };
@@ -48,7 +47,6 @@
 		C20B6F321F01E96600AE5EED /* Atividade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atividade.swift; sourceTree = "<group>"; };
 		C22AEE441F01720600ABD825 /* ToDoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22AEE471F01720600ABD825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C22AEE491F01720600ABD825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C22AEE4C1F01720600ABD825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C22AEE4E1F01720600ABD825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C22AEE511F01720600ABD825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				C20B6F311F01E94600AE5EED /* Model */,
 				C20B6F201F01E32100AE5EED /* Controllers */,
 				C22AEE471F01720600ABD825 /* AppDelegate.swift */,
-				C22AEE491F01720600ABD825 /* ViewController.swift */,
 				C22AEE4B1F01720600ABD825 /* Main.storyboard */,
 				C22AEE4E1F01720600ABD825 /* Assets.xcassets */,
 				C22AEE501F01720600ABD825 /* LaunchScreen.storyboard */,
@@ -213,7 +210,6 @@
 			files = (
 				C20B6F331F01E96600AE5EED /* Atividade.swift in Sources */,
 				C20B6F241F01E38E00AE5EED /* CadastrarViewController.swift in Sources */,
-				C22AEE4A1F01720600ABD825 /* ViewController.swift in Sources */,
 				C22AEE481F01720600ABD825 /* AppDelegate.swift in Sources */,
 				C20B6F281F01E3B600AE5EED /* ConfiguracoesViewController.swift in Sources */,
 				C20B6F261F01E3A300AE5EED /* ListarTableViewController.swift in Sources */,
