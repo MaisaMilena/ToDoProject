@@ -37,7 +37,11 @@ class CadastrarViewController: UIViewController {
         // Adiciona a atividade
         
         let newId = { () -> Int in
-            return realm.objects(Atividade.self).count + 1 //pega o próximo id disponivel
+            if realm.objects(Atividade.self).first != nil {
+                return (realm.objects(Atividade.self).last?.id)! + 1 //pega o próximo id disponivel
+            } else {
+                return 1
+            }   
         }
         
         // Cria uma atividade

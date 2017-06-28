@@ -64,7 +64,7 @@ class ConfiguracoesViewController: UIViewController {
         atividade.dataLimite = dataLimite.date
         
         let realm = try! Realm()
-        try! realm.write {
+     //   try! realm.write {
             realm.beginWrite()
             atividade = realm.create(Atividade.self,
                                      value: ["id": atividade.id,
@@ -73,7 +73,7 @@ class ConfiguracoesViewController: UIViewController {
                                              "dataLimite": atividade.dataLimite],
                                      update: true)
             try! realm.commitWrite()
-        }
+       // }
         
         
     }
