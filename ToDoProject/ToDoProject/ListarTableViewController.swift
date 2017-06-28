@@ -13,6 +13,9 @@ class ListarTableViewController: UITableViewController {
 
     var atividades = List<Atividade>()
     let realm = try! Realm()
+    var idAtividade: Int = 0
+    
+    
     var toDoList: Results<Atividade>{
         get {
             return realm.objects(Atividade.self)
@@ -47,6 +50,9 @@ class ListarTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let item = toDoList[indexPath.row]
         cell.textLabel?.text = item.nome
+        
+        let idAtividade = cell.viewWithTag(1) as! UILabel
+        idAtividade.text = String(item.id)
         return cell
     }
  
@@ -70,6 +76,8 @@ class ListarTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = toDoList[indexPath.row]   
+        idAtividade = item.id
         performSegue(withIdentifier: "listarConfiguracaoSegue", sender: indexPath.row)
     }
 
@@ -77,7 +85,7 @@ class ListarTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let proximaTela = segue.destination as! ConfiguracoesViewController
-        proximaTela.id = sender as! String
+        proximaTela.id = idAtividade
     }
 }
 

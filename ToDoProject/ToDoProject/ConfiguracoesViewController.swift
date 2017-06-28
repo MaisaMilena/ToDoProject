@@ -15,14 +15,17 @@ class ConfiguracoesViewController: UIViewController {
     @IBOutlet weak var descricao: UITextView!
     @IBOutlet weak var dataLimite: UIDatePicker!
     
+    @IBOutlet weak var atualizarButton: UIButton!
     
-    var id: String!
-    let realm = try! Realm()
+    var id: Int = 0
     var atividade = Atividade()
     
     
     override func viewDidLoad() {
+        print("🐬 carregou a configuracao")
         super.viewDidLoad()
+        atualizarButton.layer.cornerRadius = atualizarButton.frame.height/2
+        
         apresentaAtividade()
     }
 
@@ -41,11 +44,16 @@ class ConfiguracoesViewController: UIViewController {
     }
     
     private func carregarAtividade(){
-    
-        try! realm.write {
-            let predicate: NSPredicate = NSPredicate(format: "id = \(self.id)", argumentArray: nil)
-            atividade = realm.objects(Atividade.self).filter(predicate).first!
+        print("⭐️ Id na configuracao: \(id)")
+        let realm = try! Realm()
+        if id != 0 {
+            try! realm.write {
+                let predicate: NSPredicate = NSPredicate(format: "id == \(self.id)", argumentArray: nil)
+                atividade = realm.objects(Atividade.self).filter(predicate).first!
+              // atividade = realm.objects(Atividade.self).filter("id = \(self.id)")
+            }
         }
+        
         
     }
     
@@ -55,13 +63,16 @@ class ConfiguracoesViewController: UIViewController {
         atividade.descricao = descricao.text!
         atividade.dataLimite = dataLimite.date
         
+        let realm = try! Realm()
         try! realm.write {
+            realm.beginWrite()
             atividade = realm.create(Atividade.self,
                                      value: ["id": atividade.id,
                                             "nome": atividade.nome,
                                              "descricao": atividade.descricao,
                                              "dataLimite": atividade.dataLimite],
                                      update: true)
+            try! realm.commitWrite()
         }
         
         

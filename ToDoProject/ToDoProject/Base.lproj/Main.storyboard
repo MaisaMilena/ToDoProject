@@ -21,27 +21,48 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2d-ZT-1Ga">
-                                <rect key="frame" x="144" y="270" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Inserir tarefa"/>
-                                <connections>
-                                    <action selector="inserirTarefa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTR-5a-6cu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiJ-bd-z6A">
-                                <rect key="frame" x="141" y="367" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Buscar tarefa"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="workspace.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ENf-h2-UyT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="381"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="381" id="CDQ-ps-gNg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiJ-bd-z6A">
+                                <rect key="frame" x="139" y="497" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  Listar tarefa  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="listarTarefas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SlS-O2-4Yt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2d-ZT-1Ga">
+                                <rect key="frame" x="136" y="426" width="103" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="  Inserir tarefa  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inserirTarefa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTR-5a-6cu"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yiJ-bd-z6A" firstAttribute="top" secondItem="e2d-ZT-1Ga" secondAttribute="bottom" constant="41" id="02v-8C-fkO"/>
+                            <constraint firstItem="e2d-ZT-1Ga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EJA-19-NI9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yiJ-bd-z6A" secondAttribute="bottom" constant="76" id="IgV-E8-ayY"/>
+                            <constraint firstItem="yiJ-bd-z6A" firstAttribute="centerX" secondItem="ENf-h2-UyT" secondAttribute="centerX" id="LF5-tj-ov4"/>
+                            <constraint firstItem="yiJ-bd-z6A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zpi-Ge-a35"/>
+                            <constraint firstItem="ENf-h2-UyT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qZR-qp-dho"/>
+                            <constraint firstItem="ENf-h2-UyT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zsb-6s-Mw1"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7Uv-VS-xw9"/>
+                    <navigationItem key="navigationItem" title="Home" id="7Uv-VS-xw9"/>
                     <connections>
+                        <outlet property="inserirButton" destination="e2d-ZT-1Ga" id="gpf-m4-Ol6"/>
+                        <outlet property="listarTarefas" destination="yiJ-bd-z6A" id="FyG-eZ-udK"/>
                         <segue destination="K72-eP-XvZ" kind="show" identifier="homeCadastrarSegue" id="fQQ-qB-f0b"/>
                         <segue destination="ZPC-65-HcX" kind="show" identifier="homeListarSegue" id="b9y-mu-418"/>
                     </connections>
@@ -69,12 +90,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Descrição" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-0B-ylT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-0B-ylT">
                                 <rect key="frame" x="57" y="108" width="261" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data limite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr4-Rg-HmN">
                                 <rect key="frame" x="70" y="270" width="81" height="21"/>
@@ -100,10 +121,18 @@
                                     <segue destination="ZPC-65-HcX" kind="show" identifier="cadastrarListarSegue" id="byr-l0-Yq4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMG-CE-wZ0">
+                                <rect key="frame" x="57" y="79" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="cadastrarButton" destination="Ypb-AN-t4Y" id="TWP-9z-y6Y"/>
                         <outlet property="dataLimite" destination="Rl7-K7-suf" id="GHa-aw-yNO"/>
                         <outlet property="descricao" destination="fMe-0B-ylT" id="Vym-k1-6of"/>
                         <outlet property="nome" destination="SR5-aJ-2QE" id="tsp-Eu-B5W"/>
@@ -122,12 +151,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="qGO-8E-qAB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="56" id="qGO-8E-qAB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qGO-8E-qAB" id="Ver-Om-vda">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="idAtividade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjM-8X-3JI">
+                                            <rect key="frame" x="22" y="0.0" width="84" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -143,7 +181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSs-1r-YK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2006" y="-86"/>
+            <point key="canvasLocation" x="2005.5999999999999" y="-86.806596701649184"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="PsJ-h9-Er7">
@@ -194,14 +232,6 @@
                                     <!--2017-06-26 16:51:38 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-fi-od7">
-                                <rect key="frame" x="117" y="549" width="126" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Atualizar atividade"/>
-                                <connections>
-                                    <action selector="atualizarAtividade:" destination="vCS-yJ-Dxu" eventType="touchUpInside" id="3yE-b0-Bxu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uco-zm-xg5">
                                 <rect key="frame" x="118" y="605" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -214,11 +244,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-fi-od7">
+                                <rect key="frame" x="117" y="532" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Atualizar atividade"/>
+                                <connections>
+                                    <action selector="atualizarAtividade:" destination="vCS-yJ-Dxu" eventType="touchUpInside" id="3yE-b0-Bxu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86084840740000002" green="0.96161800590000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Configuração" id="Mb6-gi-rfp"/>
                     <connections>
+                        <outlet property="atualizarButton" destination="1IP-fi-od7" id="G3P-iY-s1H"/>
                         <outlet property="dataLimite" destination="pwm-3Y-tW0" id="Iaq-J2-JhG"/>
                         <outlet property="descricao" destination="cou-4e-HUD" id="1jm-F8-V7H"/>
                         <outlet property="nome" destination="5St-Up-LoT" id="fIP-vM-YSK"/>
@@ -250,6 +289,9 @@
             <point key="canvasLocation" x="92" y="-118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="workspace.jpg" width="626" height="626"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="byr-l0-Yq4"/>
     </inferredMetricsTieBreakers>

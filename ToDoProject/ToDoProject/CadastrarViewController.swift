@@ -15,10 +15,14 @@ class CadastrarViewController: UIViewController {
     @IBOutlet weak var descricao: UITextView!
     @IBOutlet weak var dataLimite: UIDatePicker!
     
+    @IBOutlet weak var cadastrarButton: UIButton!
+    
+    
     var atividades = List<Atividade>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cadastrarButton.layer.cornerRadius = cadastrarButton.frame.height/2
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,15 +33,21 @@ class CadastrarViewController: UIViewController {
     
     @IBAction func cadastrarAtividade(_ sender: Any) {
         
+        let realm = try! Realm()
+        // Adiciona a atividade
+        
+        let newId = { () -> Int in
+            return realm.objects(Atividade.self).count + 1 //pega o próximo id disponivel
+        }
+        
         // Cria uma atividade
         let atividade = Atividade()
+        atividade.id = newId()
         atividade.nome = nome.text!
         atividade.descricao = descricao.text
         atividade.dataLimite = dataLimite.date
-
         
-        let realm = try! Realm()
-        // Adiciona a atividade
+        
         try! realm.write {
             realm.add(atividade)
         }
@@ -45,6 +55,8 @@ class CadastrarViewController: UIViewController {
         // Muda de tela
         performSegue(withIdentifier: "cadastrarListarSegue", sender: nil)
     }
+
+    
     
     // MARK: - Navigation
 

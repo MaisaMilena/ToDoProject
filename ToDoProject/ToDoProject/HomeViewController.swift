@@ -10,9 +10,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var inserirButton: UIButton!
+    @IBOutlet weak var listarTarefas: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        inserirButton.layer.cornerRadius = inserirButton.bounds.height/2
+        listarTarefas.layer.cornerRadius = listarTarefas.bounds.height/2
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +30,7 @@ class HomeViewController: UIViewController {
     @IBAction func inserirTarefa(_ sender: Any) {
         performSegue(withIdentifier: "homeCadastrarSegue", sender: nil)
     }
+
 
     @IBAction func listarTarefas(_ sender: Any) {
         performSegue(withIdentifier: "homeListarSegue", sender: nil)
