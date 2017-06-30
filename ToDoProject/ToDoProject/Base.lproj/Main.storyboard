@@ -187,7 +187,7 @@
             <objects>
                 <tableViewController restorationIdentifier="ListarVC" storyboardIdentifier="ListarVC" title="Listar Atividades" id="ZPC-65-HcX" customClass="ListarTableViewController" customModule="ToDoProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" sectionHeaderHeight="28" sectionFooterHeight="28" id="OjP-rl-gSu">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9427078981" green="0.9668059336" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -232,17 +232,17 @@
                         <viewControllerLayoutGuide type="bottom" id="JrU-yC-UA9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="71y-IQ-rL8">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRY-su-I66">
-                                <rect key="frame" x="57" y="93" width="261" height="21"/>
+                                <rect key="frame" x="57" y="113" width="261" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cou-4e-HUD">
-                                <rect key="frame" x="57" y="116" width="261" height="128"/>
+                                <rect key="frame" x="57" y="136" width="261" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="2kd-d5-At2"/>
@@ -251,13 +251,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data limite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F25-uE-LsN">
-                                <rect key="frame" x="57" y="264" width="261" height="21"/>
+                                <rect key="frame" x="57" y="284" width="261" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-3Y-tW0">
-                                <rect key="frame" x="57" y="287" width="261" height="150"/>
+                                <rect key="frame" x="57" y="307" width="261" height="150"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="O1u-rU-3Du"/>
@@ -273,13 +273,13 @@
                                 <state key="normal" title="Encerrar atividade"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWk-VQ-8xA">
-                                <rect key="frame" x="57" y="20" width="261" height="21"/>
+                                <rect key="frame" x="57" y="40" width="261" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-fi-od7">
-                                <rect key="frame" x="116.5" y="518" width="142" height="30"/>
+                                <rect key="frame" x="116.5" y="582" width="142" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="  Atualizar atividade  ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -289,7 +289,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="br8-Ve-nKA">
-                                <rect key="frame" x="57" y="43" width="261" height="30"/>
+                                <rect key="frame" x="57" y="63" width="261" height="30"/>
                                 <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ilr-KQ-vEI"/>
@@ -329,6 +329,7 @@
                         <outlet property="dataLimite" destination="pwm-3Y-tW0" id="Iaq-J2-JhG"/>
                         <outlet property="descricao" destination="cou-4e-HUD" id="1jm-F8-V7H"/>
                         <outlet property="nome" destination="br8-Ve-nKA" id="bXj-rT-9YH"/>
+                        <segue destination="ZPC-65-HcX" kind="show" identifier="configuracaoListarSegue" id="P6t-a7-n4I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yu-7l-yFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -361,6 +362,6 @@
         <image name="workspace.jpg" width="626" height="626"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b9y-mu-418"/>
+        <segue reference="P6t-a7-n4I"/>
     </inferredMetricsTieBreakers>
 </document>
